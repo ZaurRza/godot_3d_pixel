@@ -749,7 +749,7 @@ public:
 #define DEBUG_VIRTUAL
 #endif // DEBUG_ENABLED
 
-	DEBUG_VIRTUAL void set_script(const Variant &p_script);
+	virtual void set_script(const Variant &p_script);
 	DEBUG_VIRTUAL Variant get_script() const;
 
 	DEBUG_VIRTUAL bool has_meta(const StringName &p_name) const;

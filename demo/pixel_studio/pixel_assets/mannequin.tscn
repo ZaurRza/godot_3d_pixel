@@ -1,0 +1,162 @@
+[gd_scene format=3 uid="uid://bh6d4i10akxhr"]
+
+[sub_resource type="Animation" id="Animation_ognmw"]
+length = 0.001
+tracks/0/type = "position_3d"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Skeleton3D/rightHand")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = PackedFloat32Array(0, 1, 0.35, 1, 0)
+tracks/1/type = "position_3d"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Skeleton3D/leftHand")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = PackedFloat32Array(0, 1, -0.3, 1, 0)
+
+[sub_resource type="Animation" id="Animation_6bdep"]
+length = 2.0
+loop_mode = 1
+tracks/0/type = "position_3d"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Skeleton3D/rightHand")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = PackedFloat32Array(0, 1, 0.35, 1, 0, 0.9, 1, 0.35, 1.1, 0, 1.9666667, 1, 0.35, 1, 0)
+tracks/1/type = "position_3d"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Skeleton3D/leftHand")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = PackedFloat32Array(0, 1, -0.3, 1, 0, 0.9, 1, -0.3, 1.1, 0, 2, 1, -0.3, 1, 0)
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_0dd35"]
+_data = {
+&"RESET": SubResource("Animation_ognmw"),
+&"idle": SubResource("Animation_6bdep")
+}
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_22esw"]
+albedo_color = Color(0.65625, 0.65625, 0.65625, 1)
+texture_filter = 0
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_e6iac"]
+height = 1.0
+radial_segments = 6
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1yxqk"]
+albedo_color = Color(0.65625, 0.65625, 0.65625, 1)
+texture_filter = 0
+
+[sub_resource type="BoxMesh" id="BoxMesh_22esw"]
+size = Vector3(0.5, 1, 0.5)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ognmw"]
+albedo_color = Color(0, 0, 0, 1)
+texture_filter = 0
+
+[sub_resource type="BoxMesh" id="BoxMesh_1yxqk"]
+
+[node name="PixelMannequin" type="PixelMannequin3D" unique_id=493806704]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=298958180]
+libraries/ = SubResource("AnimationLibrary_0dd35")
+
+[node name="Skeleton3D" type="Skeleton3D" parent="." unique_id=596021020]
+bones/0/name = "bone_0"
+bones/0/parent = -1
+bones/0/rest = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+bones/0/enabled = true
+bones/0/position = Vector3(0, 0, 0)
+bones/0/rotation = Quaternion(0, 0, 0, 1)
+bones/0/scale = Vector3(1, 1, 1)
+bones/0/skin_scale = Vector3(1, 1, 1)
+bones/1/name = "bone_1"
+bones/1/parent = 0
+bones/1/rest = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+bones/1/enabled = true
+bones/1/position = Vector3(0, 1.25, 0)
+bones/1/rotation = Quaternion(0, 0, 0, 1)
+bones/1/scale = Vector3(1, 1, 1)
+bones/1/skin_scale = Vector3(1, 1, 1)
+bones/2/name = "bone_2"
+bones/2/parent = 0
+bones/2/rest = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+bones/2/enabled = true
+bones/2/position = Vector3(0.35, 1.1, 0)
+bones/2/rotation = Quaternion(0, 0, 0.06282847, 0.99802434)
+bones/2/scale = Vector3(1, 1, 1)
+bones/2/skin_scale = Vector3(1, 1, 1)
+bones/3/name = "bone_3"
+bones/3/parent = 0
+bones/3/rest = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+bones/3/enabled = true
+bones/3/position = Vector3(-0.3, 1.1, 0)
+bones/3/rotation = Quaternion(0, 0, -0.06423847, 0.9979346)
+bones/3/scale = Vector3(1, 1, 1)
+bones/3/skin_scale = Vector3(1, 1, 1)
+bones/4/name = "bone_4"
+bones/4/parent = 0
+bones/4/rest = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+bones/4/enabled = true
+bones/4/position = Vector3(0, 0, 0)
+bones/4/rotation = Quaternion(0, 0, 0, 1)
+bones/4/scale = Vector3(1, 1, 1)
+bones/4/skin_scale = Vector3(1, 1, 1)
+bones/5/name = "bone_5"
+bones/5/parent = 0
+bones/5/rest = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+bones/5/enabled = true
+bones/5/position = Vector3(0, 0, 0)
+bones/5/rotation = Quaternion(0, 0, 0, 1)
+bones/5/scale = Vector3(1, 1, 1)
+bones/5/skin_scale = Vector3(1, 1, 1)
+
+[node name="head" type="BoneAttachment3D" parent="Skeleton3D" unique_id=772001998]
+bone_name = "bone_1"
+bone_idx = 1
+
+[node name="Head" type="PixelPiece3D" parent="Skeleton3D/head" unique_id=560324611]
+transform = Transform3D(0.45, 0, 0, 0, 0.45, 0, 0, 0, 0.45, 0, 0, 0)
+material_override = SubResource("StandardMaterial3D_22esw")
+mesh = SubResource("CylinderMesh_e6iac")
+
+[node name="body" type="BoneAttachment3D" parent="Skeleton3D" unique_id=2021087278]
+bone_name = "bone_0"
+bone_idx = 0
+
+[node name="Piece4" type="PixelPiece3D" parent="Skeleton3D/body" unique_id=1834105851]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5116098, 0)
+material_override = SubResource("StandardMaterial3D_1yxqk")
+mesh = SubResource("BoxMesh_22esw")
+
+[node name="rightHand" type="BoneAttachment3D" parent="Skeleton3D" unique_id=2082873191]
+bone_name = "bone_2"
+bone_idx = 2
+
+[node name="Piece3" type="PixelPiece3D" parent="Skeleton3D/rightHand" unique_id=1627438443]
+transform = Transform3D(0.063280635, 7.450581e-09, 0, 9.313226e-10, 1, 0, 0, 0, 0.20991093, -0.053, -0.5, 0)
+material_override = SubResource("StandardMaterial3D_ognmw")
+mesh = SubResource("BoxMesh_1yxqk")
+
+[node name="Socket2" type="BoneAttachment3D" parent="Skeleton3D/rightHand" unique_id=1108576730]
+bone_name = "bone_5"
+bone_idx = 5
+
+[node name="leftHand" type="BoneAttachment3D" parent="Skeleton3D" unique_id=706953877]
+bone_name = "bone_3"
+bone_idx = 3
+
+[node name="Piece2" type="PixelPiece3D" parent="Skeleton3D/leftHand" unique_id=1087137705]
+transform = Transform3D(0.063280635, 0, 0, 0, 0.99999994, 0, 0, 0, 0.20991093, 0, -0.5, 0)
+material_override = SubResource("StandardMaterial3D_ognmw")
+mesh = SubResource("BoxMesh_1yxqk")
+
+[node name="Socket" type="BoneAttachment3D" parent="Skeleton3D/leftHand" unique_id=14790008]
+bone_name = "bone_1"
+bone_idx = 1

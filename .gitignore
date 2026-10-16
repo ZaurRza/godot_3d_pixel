@@ -396,3 +396,7 @@ $RECYCLE.BIN/
 *.msp
 *.lnk
 *.generated.props
+
+# Local Pixel Studio build tools and validation projects.
+.build_tools/
+.pixel_studio_checks/

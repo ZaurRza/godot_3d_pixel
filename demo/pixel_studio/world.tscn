@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://gk1dman82ce8"]
+
+[ext_resource type="Script" uid="uid://l55lavtpsjwx" path="res://world.gd" id="1"]
+[ext_resource type="PackedScene" uid="uid://bh6d4i10akxhr" path="res://pixel_assets/mannequin.tscn" id="2_fj7yv"]
+
+[sub_resource type="Environment" id="Environment"]
+background_mode = 1
+background_color = Color(0.12, 0.18, 0.22, 1)
+ambient_light_source = 3
+ambient_light_color = Color(0.68, 0.78, 0.78, 1)
+ambient_light_energy = 0.65
+
+[node name="FirstWorld" type="PixelWorld3D" unique_id=28724945]
+script = ExtResource("1")
+
+[node name="Camera" type="PixelCamera3D" parent="." unique_id=271694529]
+current = true
+size = 16.0
+
+[node name="Sun" type="DirectionalLight3D" parent="." unique_id=655791215]
+transform = Transform3D(0.8660254, 0.40957603, -0.28678823, 0, 0.57357645, 0.81915206, 0.5, -0.7094065, 0.49673176, 0, 0, 0)
+light_color = Color(1, 0.92, 0.72, 1)
+light_energy = 1.2
+shadow_enabled = true
+
+[node name="Environment" type="WorldEnvironment" parent="." unique_id=635916191]
+environment = SubResource("Environment")
+
+[node name="PixelMannequin" parent="." unique_id=493806704 instance=ExtResource("2_fj7yv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.3732958, 1.7603445, -0.7935767)

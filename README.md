@@ -1,5 +1,8 @@
 # Godot Engine
 
+This fork includes **Pixel Studio**, an initial specialized workspace for 3D pixel-art games.
+See [the module guide](modules/pixel_studio/README.md) for implemented tools, limitations, build instructions, and the demo project.
+
 <p align="center">
   <a href="https://godotengine.org">
     <img src="misc/logo/logo_outlined.svg" width="400" alt="Godot Engine logo">
